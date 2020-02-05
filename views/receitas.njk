@@ -1,0 +1,23 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+    <div class="receitas">
+        <section class="pratos">
+            {% for prato in item %}
+                <div class="prato" id="{{ loop.index -1 }}">
+                    <div class="container-img">
+                        <img src="{{prato.image}}" alt="{{prato.title}}">
+                    </div>
+                    <div class="container-prato">
+                        <p>{{prato.title}}</p>
+                    </div>
+                    <div class="container-chefe">
+                        <p>{{prato.author}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+
+{% endblock %}
