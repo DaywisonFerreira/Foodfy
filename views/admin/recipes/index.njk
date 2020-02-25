@@ -1,4 +1,4 @@
-{% extends './layout.njk' %}
+{% extends '../layout.njk' %}
 
 {% block content %}
     <div class="gerenciar">    
@@ -13,7 +13,7 @@
             </div>
             <div class="info-receitas">
                 <h4>{{item.title}}</h4>
-                <p>{{item.author}}</p>
+                <p>{{item.chef_name}}</p>
                 <a href="/admin/recipes/{{item.id}}">Visualizar</a>
             </div>
         </div>

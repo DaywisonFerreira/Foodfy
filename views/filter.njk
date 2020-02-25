@@ -1,13 +1,11 @@
 {% extends 'layout.njk' %}
 
-{% block search %}
-{% include './search.njk' %}
-{% endblock %}
 {% block content %}
 
     <div class="receitas">
+    <h3>Buscando por: "{{filter}}" </h3>
         <section class="pratos">
-            {% for prato in item %}
+            {% for prato in recipes %}
                 <div class="prato" id="{{ prato.id }}">
                     <div class="container-img">
                         <img src="{{prato.image}}" alt="{{prato.title}}">
@@ -16,7 +14,7 @@
                         <p>{{prato.title}}</p>
                     </div>
                     <div class="container-chefe">
-                        <p>{{prato.chef_name}}</p>
+                        <p>por {{prato.chef_name}}</p>
                     </div>
                 </div>
             {% endfor %}

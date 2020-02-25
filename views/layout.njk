@@ -20,15 +20,15 @@
                     <div class="menus">
                         <a href="/sobre">Sobre</a>
                         <a href="/receitas">Receitas</a>
+                        <a href="/chefs">Chefs</a>
                     </div>
+                    {% block search %}{% endblock %}
                 </div>
             </header>
             {% block content %}{% endblock %}
         </div>
         <footer>
-            <div class="text">
-                <p>Todos direitos reservados, receitas Foodfy</p>
-            </div>
+            <p>Todos direitos reservados, receitas Foodfy</p>
         </footer>
         <script src="/scripts.js"></script>
     </body>

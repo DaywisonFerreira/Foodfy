@@ -1,5 +1,7 @@
 {% extends 'layout.njk' %}
-
+{% block search %}
+{% include './search.njk' %}
+{% endblock %}
 {% block content %}
     <div class="informacao-receitas">
         <div class="receita-banner">
@@ -8,7 +10,7 @@
         <div class="info-receita">
             <h1>{{item.title}}</h1>
             <p>por
-                {{item.author}}</p>
+                {{item.chef_name}}</p>
         </div>
         <section class="ingredientes">
             <div>

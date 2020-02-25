@@ -1,6 +1,10 @@
 {% extends 'layout.njk' %}
 
+{% block search %}
+{% include './search.njk' %}
+{% endblock %}
 {% block content %}
+
     <div class="principal">
         <div class="texto-receitas">
             <h1>As melhores receitas</h1>
@@ -23,7 +27,7 @@
                 <p>{{receita.title}}</p>
             </div>
             <div class="container-chefe">
-                <p>{{receita.author}}</p>
+                <p>{{receita.chef_name}}</p>
             </div>
         </div>
         {% endfor %}        

@@ -1,7 +1,7 @@
-{% extends './layout.njk' %}
+{% extends '../layout.njk' %}
 
 {% block content %}
-    <div class="form-create-recipe">
+    <div class="form-create">
         <h3>Receita: {{item.title}}</h3>
         <button type="submit">
             <a href="/admin/recipes/{{item.id}}/edit">Editar Receita</a>
@@ -14,7 +14,7 @@
         <div class="info-receita">
             <h1>{{item.title}}</h1>
             <p>por
-                {{item.author}}</p>
+                {{item.chef_name}}</p>
         </div>
         <section class="ingredientes">
             <div>
