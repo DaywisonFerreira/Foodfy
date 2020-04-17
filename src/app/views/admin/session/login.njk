@@ -1,0 +1,26 @@
+{% extends './layout.njk' %}
+
+{%block content%}
+    <div class="info-sessao">
+        <h3>Iniciar Sessão</h3>
+    </div>
+    <div class="container">
+        <form method="POST" class="form-login" action="/admin/login">
+
+            <div class="fields">
+                {% include './fields.njk' %}
+            </div>
+            <div class="footer">
+                <div>
+                    <a href="/admin/forgot-password">Perdeu a senha?</a>
+                </div>
+                <div>
+                    <button class="button" type="submit">Acessar</button>
+                </div>
+            </div>
+            <input type="hidden" name="token" value="{{token}}">
+        </form>
+
+    </div>
+
+{%endblock content%}

@@ -1,0 +1,32 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+    <form action="/admin/chefs?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="form-create">
+            <h3>Editando chef</h3>
+            <input type="hidden" value="{{chef.id}}" name="id">
+            <input type="hidden" value="{{chef.file_id}}" name="file_id">
+            <button type="submit" class="btn-salvar">Salvar chef</button>
+        </div>
+        
+        {% include 'admin/chefs/fields.njk' %}
+        
+
+    </form>
+    <form id="form-delete" action="/admin/chefs?_method=DELETE" method="POST">
+        <input type="hidden" value="{{chef.id}}" name="id">
+        <button type="submit" id="btn-delete">Deletar</button>
+    </form>
+
+    <script>
+        const formDelete = document.querySelector("#form-delete")
+        formDelete.addEventListener("submit", function(event){
+            const resp = confirm("Tem certeza que deseja excluir esse chef?")
+            if(!resp) {
+                event.preventDefault()
+            }
+        })
+
+    </script>
+{% endblock %}

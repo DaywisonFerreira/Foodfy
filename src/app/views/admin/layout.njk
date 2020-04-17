@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Admin</title>
+</head>
+<body>
+ {% include "./parts/messages.njk" %}
+    <header class="header-admin">
+        <a href="/admin/recipes"><img src="/img/logo_admin.png" alt=""></a>
+        <a href="/admin/recipes">receitas</a>
+        <a href="/admin/chefs">chefs</a>
+        {%if session.user.is_admin %}
+        <a href="/admin/users">Usuários</a>
+        {% endif %}
+        {% if session.user %}
+            <form action="/admin/logout" class="logout" method="POST">
+                <button>Sair</button>
+            </form>
+        {% endif %}
+    </header>
+   
+    <div class="container">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    
+    <script src="/admin.js"></script>
+</body>
+</html>

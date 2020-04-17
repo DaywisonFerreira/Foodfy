@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.logo-admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    height: 67px;  
+}
+
+.logo-admin p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    color: #111111;
+    letter-spacing: 1.65px;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.info-sessao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-sessao h3 {
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 146px;
+    margin-bottom: 0px;
+}
+
+.form-login {
+    margin-top: 35px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+.fields div h4 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.form-login .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    align-items: flex-end;
+}
+
+.form-login .footer .button {
+    background: #6558C3;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    width: 134px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.form-login .footer a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #969696;
+    text-decoration: none;
+}
+ 
+.footer .btn-recuperar,
+.footer .btn-nova-senha{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}   
+
+.fields .error-input{
+    background: #FFFFFF;
+    border: 1px solid #FF3131;
+    border-radius: 4px;    
+}

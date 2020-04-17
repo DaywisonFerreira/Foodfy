@@ -2,13 +2,14 @@ body{
     margin: 0;
     border: 0;
     padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
 .main{
-    width: 940px;
-    height: 940px;
+    max-width: 940px;
     margin: 0 auto;
 }
 
@@ -45,6 +46,13 @@ body{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     margin-right: 30px;
+}
+
+.active-site{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #111111;
 }
 
 .links form input{
@@ -144,7 +152,7 @@ body{
 .container-chefe p {
     font-size: 14px;
     line-height: 16px;
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #777777;
     margin-top: 5px; 
 }
@@ -163,7 +171,7 @@ body{
 
 .descricao {
     height: 280px;
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
@@ -179,7 +187,7 @@ body{
 }
 
 .desc-nossas-receitas{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #444444;
     line-height: 28px; 
@@ -200,82 +208,15 @@ body{
     margin-top: 50px;
 }
 
-/* MODAL */
-.modal-overlay{
-    width: 660px;
-    height: 413px;
-    background: #FFFFFF;
-    border-radius: 16px;
-    position: absolute;
-    top: 355px;
-    left: 370px;
-    opacity: 0;
-    visibility: hidden;   
-}
-
-.modal {
-    background: #FFFFFF;
-    border-radius: 16px;
-}
-
-.modal .close-modal{
-    color: black;
-    position: absolute;
-    cursor: pointer;
-}
-
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-
-}
-
-
-.modal-container-img img {
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-left: 30px;
-}
-
-.modal-container-prato p{
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 24px;
-    color: #111111;
-    text-align: center;
-    line-height: 28px;
-    margin-top: 20px;
-}
-
-.modal-container-chefe p {
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 18px;
-    color: #777777;
-    text-align: center;
-    line-height: 21px;
-    margin-top: 5px;
-}
-
-.close-modal{
-    text-align: center;
-    margin-left: 281px;
-    margin-top: 60px;
-}
-
-.close-modal a{
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 16px;
-    color: #999999;
-}
 
 footer {
     background-color: #EEEEEE;
     height: 62px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: auto
   }
   
   footer p{
@@ -291,7 +232,7 @@ footer {
     height: 280px;
     border-radius: 15px;
     margin-top: 56px;
-    margin-bottom: 50px;
+    margin-bottom: 8px;
 }
 
 .receita-banner img{
@@ -313,7 +254,7 @@ footer {
 }
 
 .info-receita p{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #777777;
     line-height: 24px;
@@ -352,7 +293,7 @@ footer {
 }
 
 #lista-ingredientes ul{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
@@ -410,7 +351,7 @@ footer {
     margin-top: 20px;
 }
 .info-adicionais p {
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
@@ -419,10 +360,11 @@ footer {
 
 #lista-preparo{
     width: 940px;
+    margin-top: 20px;
 }
 
 #lista-preparo ul{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #444444;
     line-height: 28px;
@@ -438,35 +380,51 @@ footer {
 
 .header-admin{
     background: #111111;
-    width: 1400px;
+    width: 100%;
     height: 80px;
-    display: grid;
+    display: flex;
     align-items: center;
+    position: relative;
+}
+.logout{
+    position: absolute;
+    right: 50px;   
+}
+
+.logout button{
+    font-size: 15px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .container {
     width: 940px;
     margin: 0 auto;
     margin-left: 230px;
+    position: relative;
 }
 
-.header-admin {
-    display: flex;
-    align-items: center;
-}
 
 .header-admin a img {
     margin-left: 231px;
 }
 
 .header-admin a {
-    color: #FFFFFF;
+    color: #999999;
     text-decoration: none;
     margin-right: 30px;
     font-size: 15px;
     text-align: left;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+}
+
+a.menu-active {
+    color: #FFFFFF;
 }
 
 .header-admin a:first-child {
@@ -476,10 +434,9 @@ footer {
 
 .gerenciar {
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
     color: #111111;
     line-height: 28px;
-    margin-top: 50px;
+    margin-top: 54px;
     display: grid;
     grid-template-columns: 1fr 160px;
     align-items: baseline;
@@ -524,14 +481,14 @@ footer {
 }
 
 .receita-admin .info-receitas h4{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #111111;
     margin: 0px 0px 5px 0px;
 }
 
 .receita-admin .info-receitas p{
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #777;
     margin: 0px 0px 10px 0px;
@@ -554,13 +511,20 @@ footer {
     color: #111111;
     line-height: 28px;
     margin-top: 55px;
+    
 }
+
+.form-create div {
+    display: flex;
+    justify-content: flex-end;    
+}
+
+
 
 .form-create button {
     width: 139px;
     height: 37px;
     border-radius: 4px;
-    background: #6558C3;
     margin-top: 50px;
     font-size: 16px;
     color: #FFFFFF;
@@ -568,17 +532,40 @@ footer {
     cursor: pointer;
 }
 
+.form-create .btn-salvar,
+.form-create .btn-edit {
+    background: #6558C3;    
+}
+
+.form-create .btn-deletar {
+    background: #DC4747;
+    margin-right: 16px;
+}
+
+.form-create .btn-cancelar {
+    background: #8A8A8A;
+    margin-left: 16px;
+}
+
+.form-create .btn-cancelar a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
 .fields div h4 {
     font-size: 16px;
     color: #111111;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 30px 0 10px 0;
 }
 
-.fields div input {
+.fields input,
+.fields select {
     width: 100%;
     height: 47px;
-    padding: 0;
+    padding-left: 15px;
+    box-sizing: border-box;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     background: #FFFFFF;
@@ -617,7 +604,6 @@ button[type="submit"] a {
     height: 280px;
     border-radius: 15px;
     margin-top: 24px;
-    margin-bottom: 50px;
 }
 
 .receita-banner img{
@@ -650,6 +636,8 @@ button[type="submit"] a {
     margin-bottom: 51px;
 }
 
+
+
 #form-delete button{
     background: #DC4747;
     border-radius: 4px;
@@ -659,41 +647,50 @@ button[type="submit"] a {
     width: 92px;
     height: 37px;
     position: absolute;
-    top: 131px;
-    right: 340px;
+    top: 51px;
+    right: 150px;
     cursor: pointer;
 
 }
 
 /* admin chefs */
-.txt-gerenciar-chef {
-    width: 300px
+.txt-gerenciar {
+    width: 300px;
+    font-size: 24px;
+    color: #111111;
+    margin-top: 0;
 }
 
 .lista-chefs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    margin-top: 30px;  
+    display: flex;
+    align-items: center;
+    margin-top: 30px; 
+    flex-wrap: wrap; 
 }
 
 .chefs-admin {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 20px;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 64px;
+    margin-bottom: 30px;
 }
 
 .chefs-admin img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+   
+    
 }
 
 
 .info-chef h4 {
     font-size: 18px;
     color: #111111;
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin:0;
 }
 
@@ -723,8 +720,9 @@ button[type="submit"] a {
     border-radius: 50%;    
 }
 .info-chef {
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .info-chef h1{
     font-size: 36px;
@@ -750,6 +748,32 @@ button[type="submit"] a {
     margin-top: 50px;
 }
 
+.preview-recipe{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.preview-recipe img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+    transition: opacity 200ms;
+
+    opacity: 0.5;
+}
+
+.preview-recipe img:hover {
+    opacity: 1;
+}
+
+.imgRecipe.bannerActive{
+    opacity: 1;
+}
+
 select {
     width: 400px;
     height: 47px;
@@ -758,20 +782,296 @@ select {
     border: 1px solid #DDDDDD;
     padding: 0;
 }
+.info-chef-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.informações-chef h4{
+.info-chef-site h4{
     font-size: 18px;
     color: #111111;
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 5px;
     margin-top: 0;
 }
 
-.informações-chef p{
-    margin: 0;
+.info-chef-site p{
+    width: 100%;
+    margin: 0 95px 0 0;
     font-size: 14px;
     color: #666666;
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* AVATAR UPLOAD */
+.photo-avatar{
+    width: 100%;
+    height: 37px;
+    position: relative;
+}
+
+.photo-avatar p {
+    padding: 8px 16px;
+    background: #6558C3;
+    border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;    
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.photo-avatar #avatar_file {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.input-group{
+    width: 139px;
+    height: 37px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.all-photos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#photos-preview {
+    width: 149px;
+    height: 149px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 8px;
+    margin-top: 2px;
+}
+
+#photos-preview img{
+    width: 149px;
+    height: 149px;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+    box-sizing: border-box;
+
+    object-fit: cover; 
+}
+
+#photos-preview .photo {
+    position: relative;
+}
+
+#photos-preview .photo i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    color: red;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 500%;
+    cursor: pointer;
+
+    transition: opacity 200ms;
+
+    opacity: 0;
+}
+
+#photos-preview .photo:hover i {
+    opacity: 1;
+}
+
+
+.fields #photos-upload {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 149px;
+    height: 149px;
+    border: 1px solid #DDDDDD;
+    border-radius: 3.5px;
+}
+
+
+.fields #photos-upload i{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #777777;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fields #photos-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.author-option{
+    position: relative;
+}
+
+.author-option i {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    font-size: 20px;
+    color: #999999;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fields .author-option .select-chef{
+    font-size: 16px;
+    color: #999999;
+}
+
+/* users admin */
+.fields-users{
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fields-users div{
+    width: 450px;
+}
+
+.fields-users input{
+    width: 450px;
+    height: 49px;
+}
+
+.list-users {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 224px;
+    margin-top: 64px;  
+}
+
+.list-users div {
+    margin-bottom: 52px;
+}
+
+.list-users div p:first-child {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-users p {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list-users a {
+    color: #6558C3;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.list-users .button-delete {
+    color: #F55A5A;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.list-users  form {
+    display: inline;
+}
+
+
+
+
+
+.is_admin {
+   margin-top: 33px; 
+   font-size: 16px;
+   color: #111111;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* validate errors */
+.error {
+    background-color: #e74c3c;
+    padding: 4px;
+    color: white;
+    border-radius: 4px;
+}
+
+@keyframes hidemessages {
+    to {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+.messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 344px;
+    height: 135px;
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: hidemessages 400ms 3s ease-out forwards;
+    top: 12px;
+    right: 18px;
+    opacity: 1;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.messages.error {
+    background: #DC4747;
+}
+
+.messages.success {
+    background: #01B12A;
 
 }
 

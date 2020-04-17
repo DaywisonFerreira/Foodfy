@@ -1,0 +1,33 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+
+    <form action="/admin/recipes?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="form-create">
+            <h3>Editando receita</h3>
+            <input type="hidden" value="{{recipe.id}}" name="id">
+            <button type="submit" class="btn-salvar" onclick="PhotosUpload.checkExistPhoto(event)">Salvar receita</button>
+        </div>
+        
+        {% include 'admin/recipes/fields.njk' %}    
+    </form>
+    
+     <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+        <input type="hidden" value="{{recipe.id}}" name="id">
+        <button type="submit" id="btn-delete">Deletar</button>
+    </form>
+   
+
+    <script>
+        const formDelete = document.querySelector("#form-delete")
+        formDelete.addEventListener("submit", function(event){
+            const resp = confirm("Tem certeza que deseja excluir essa receita?")
+            if(!resp) {
+                event.preventDefault()
+            }
+        })
+
+    </script>
+
+    <script src="/recipe.js"></script>
+{% endblock %}

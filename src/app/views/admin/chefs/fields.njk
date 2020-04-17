@@ -1,0 +1,30 @@
+<div class="fields">
+    <div>
+        <h4>Nome</h4>
+        <input 
+            type="text" 
+            name="name" 
+            value="{{chef.name}}"
+        >
+    </div>
+    <div class="photo-avatar">
+        <div><h4>Avatar</h4></div>
+          {%if chef.img %}
+            <input type="text" value="{{chef.img}}">    
+        {% endif %}  
+        <div class="input-group">       
+            <input 
+                id="avatar_file" 
+                type="file" 
+                name="avatar" 
+                accept="image/*"
+                onchange="PhotosUpload.handleFileInput(event)"
+            >    
+            <p>Enviar Avatar</p>    
+        </div>
+        
+
+        <div id="photos-preview">
+        </div>
+    </div>    
+</div>

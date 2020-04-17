@@ -1,0 +1,38 @@
+{% extends '../layout.njk' %}
+
+{% block content %}
+    <div class="gerenciar">    
+        <h3 class="txt-gerenciar">Usuários</h3>
+        <button><a href="/admin/users/create">Novo</a></button>
+    </div>
+    <div class="list-users">
+        {% for user in users %}
+        <div>
+            <p>{{user.name}}</p>
+            <p>{{user.email}}</p>
+                {%if user.id == session.user.id%}
+                    <a href="/admin/profile">Editar</a>
+                {%else%}
+                    <a href="/admin/users/{{user.id}}/edit">Editar</a>
+                {%endif%}
+                <form  id="form-delete" action="/admin/users?_method=DELETE" method="post">
+                    <input type="hidden" value="{{user.id}}" name="id">
+                    <input type="submit" class="button-delete" value="Remover">
+                </form>
+        </div>
+        {% endfor %}
+    </div>
+    {% if chefs.length < 1 %}
+        <p>Nenhum chefe cadastrado ainda.</p>
+    {%endif%}
+
+    <script>
+        const formDelete = document.querySelector("#form-delete")
+        formDelete.addEventListener("submit", function (event) {
+            const confirmation = confirm("Tem certeza que deseja excluir esse usuário? Essa operação não poderá ser desfeita")
+            if (!confirmation) {
+                event.preventDefault()
+            }
+        })
+    </script>
+{% endblock %}

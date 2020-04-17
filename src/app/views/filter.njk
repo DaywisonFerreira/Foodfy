@@ -1,0 +1,26 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+    <div class="receitas">
+    <h3>Buscando por: "{{filter}}" </h3>
+        <section class="pratos">
+            {% for prato in recipes %}
+                <div class="prato" id="{{ prato.id }}">
+                    <div class="container-img">
+                    <a href="/recipes/{{prato.id}}">
+                        <img src="{{prato.img}}" alt="{{prato.title}}">                    
+                    </a>
+                    </div>
+                    <div class="container-prato">
+                        <p>{{prato.title}}</p>
+                    </div>
+                    <div class="container-chefe">
+                        <p>por {{prato.chef}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+
+{% endblock %}

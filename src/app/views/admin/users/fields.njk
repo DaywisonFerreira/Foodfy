@@ -1,0 +1,26 @@
+<div class="fields">
+    <div class="fields-users">
+
+        <div>
+            <h4>Nome</h4>
+            <input type="text" name="name" placeholder="Digite o nome completo" value="{{user.name}}">
+        </div>
+
+        <div>
+            <h4>Email</h4>
+            <input type="email" name="email" value="{{user.email}}" placeholder="Digite o email" onblur="Validate.apply(this, 'isEmail')">
+        </div>
+        {%if session.user.id == user.id%}
+        <div>
+            <h4>Senha</h4>
+            <input type="password" name="password"  placeholder="Digite uma senha segura">
+        </div>
+        {%endif%}
+    </div>
+</div>
+{%if session.user.id != user.id%}
+<div class="is_admin">
+    <input type="checkbox" id="is_admin" name="is_admin" value=true {%if user.is_admin == true %}checked{%endif%}>
+    <label for="is_admin">Administrador</label>
+</div>
+{%endif%}
