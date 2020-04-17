@@ -9,9 +9,9 @@
 </h1>
 
 # Indice
-- [Sobre](#-sobre)
-- [Teconologias utilizadas](#-tecnologias-utilizadas)
-- [Como baixar o projeto](#-como-baixar-o-projeto)
+- [Sobre](#sobre)
+- [Teconologias utilizadas](#tecnologias-utilizadas)
+- [Como baixar o projeto](#como-baixar-o-projeto)
 
 ##  Sobre
 O projeto Foodfy é um gerenciador de receitas com painel admin criado dentro do curso Bootcamp LaunchBase com intuito de colocarmos em prática as tecnologias estudadas durante o curso.
