@@ -10,7 +10,7 @@
 
 # Indice
 - [Sobre](#sobre)
-- [Teconologias utilizadas](#tecnologias-utilizadas)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Como baixar o projeto](#como-baixar-o-projeto)
 
 ##  Sobre
